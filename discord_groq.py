@@ -27,10 +27,10 @@ def call_groq(question):
     )
 
     response = completion.choices[0].message.content
-    print(response
+    print(response)
               # Truncate response if it exceeds Discord's 2000 character limit
     if len(response) > 2000:
-        response = response[:1997] + "..."  # Add ellipsis to indicate truncation)
+        response = response[:1997] + "..."  # Add ellipsis to indicate truncation
     return response
 
 
